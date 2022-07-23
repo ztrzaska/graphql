@@ -12,6 +12,7 @@ graphql:
     # if you want to @ExceptionHandler annotation for custom GraphQLErrors
     exception-handlers-enabled: true
     max-query-depth: 100
+    websocket.enabled: false
   playground:
     headers:
       Authorization: Bearer TOKEN
