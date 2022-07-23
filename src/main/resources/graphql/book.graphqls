@@ -1,0 +1,9 @@
+type Book {
+  id: ID!
+  name: String!
+  pageCount: Int!
+  genre: Genre
+  author: Author
+  releaseDate: Date
+  createdAt: DateTime
+}

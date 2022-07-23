@@ -1,0 +1,7 @@
+input CreateBookInput {
+    name: String!
+    pageCount: Int!
+    genre: Genre
+    releaseDate: Date
+    authorId: String!
+}

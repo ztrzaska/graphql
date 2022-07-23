@@ -1,0 +1,32 @@
+server.port: 9001
+graphql:
+  servlet:
+    # Sets if GraphQL servlet should be created and exposed. If not specified defaults to "true".
+    enabled: true
+    # Sets the path where GraphQL servlet will be exposed. If not specified defaults to "/graphql"
+    mapping: /graphql
+    cors-enabled: true
+    cors:
+    #  allowed-origins: http://some.domain.com
+      allowed-methods: GET, POST
+    # if you want to @ExceptionHandler annotation for custom GraphQLErrors
+    exception-handlers-enabled: true
+    max-query-depth: 100
+  playground:
+    headers:
+      Authorization: Bearer TOKEN
+    tabs:
+      - name: Books sample query
+        query: classpath:playground/books.graphql
+        variables: classpath:playground/books_variable.json
+voyager:
+  enabled: true
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  sql.init.mode: always
+  jpa:
+    hibernate.ddl-auto: create-drop
+    defer-datasource-initialization: true

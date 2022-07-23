@@ -1,0 +1,5 @@
+# Supported genres
+enum Genre {
+    COMEDY
+    THRILLER
+}
