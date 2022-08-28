@@ -1,4 +1,4 @@
-# GraphQL API
+# A reference implementation of GraphQL for Spring boot
 
 ### Guides
 
