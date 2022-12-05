@@ -17,7 +17,7 @@ http://localhost:9001/voyager
 
 ### Curl
 ```
-curl  --url http://localhost:9001/graphql -H 'Content-Type:application/json' -H 'Accept:application/json' --data-binary "{\"query\": \"query { books { id name }}\", \"variables\" : {}}"
+curl  --url http://localhost:9001/graphql -H 'Accept:application/json' --data-binary "{\"query\": \"query { books { id name }}\", \"variables\" : {}}"
 ```
 
 ### Uploading file to server
