@@ -12,16 +12,10 @@ graphql:
     # if you want to @ExceptionHandler annotation for custom GraphQLErrors
     exception-handlers-enabled: true
     max-query-depth: 100
-    websocket.enabled: false
   playground:
     headers:
       Authorization: Bearer TOKEN
-    tabs:
-      - name: Books sample query
-        query: classpath:playground/books.graphql
-        variables: classpath:playground/books_variable.json
-voyager:
-  enabled: true
+    enabled: true
 spring:
   servlet:
     multipart:

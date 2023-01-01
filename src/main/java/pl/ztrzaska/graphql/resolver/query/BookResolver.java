@@ -1,11 +1,11 @@
 package pl.ztrzaska.graphql.resolver.query;
 
-import graphql.kickstart.tools.GraphQLQueryResolver;
 import graphql.schema.DataFetchingEnvironment;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Component;
 import pl.ztrzaska.graphql.domain.BookDto;
 import pl.ztrzaska.graphql.domain.BookPageDto;
@@ -20,11 +20,12 @@ import java.util.UUID;
 @Component
 @Slf4j
 @RequiredArgsConstructor
-public class BookResolver implements GraphQLQueryResolver {
+public class BookResolver  {
 
     private final BookRepository bookRepository;
     private final BookMapper bookMapper;
 
+    @QueryMapping
     public BookDto bookById(UUID id, DataFetchingEnvironment environment) {
         log.info("Retrieving new book id: {}", id);
 
@@ -35,12 +36,14 @@ public class BookResolver implements GraphQLQueryResolver {
         return bookMapper.map(book);
     }
 
+    @QueryMapping
     public List<BookDto> books(DataFetchingEnvironment environment) {
         log.info("Retrieving books {}", LocalDateTime.now());
         Iterable<BookEntity> books = bookRepository.findAll();
         return bookMapper.map(books);
     }
 
+    @QueryMapping
     public BookPageDto booksPaginated(int pageNumber, int pageSize) {
         log.info("Retrieving books paginated {}", LocalDateTime.now());
 
