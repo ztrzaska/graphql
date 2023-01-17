@@ -1,4 +1,7 @@
 server.port: 9001
+spring.graphql.graphiql:
+  enabled: true
+  path: /graphiql
 #graphql:
 #  servlet:
 #    # Sets if GraphQL servlet should be created and exposed. If not specified defaults to "true".

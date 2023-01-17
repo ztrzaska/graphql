@@ -1,6 +1,5 @@
 package pl.ztrzaska.graphql.repository;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 import pl.ztrzaska.graphql.model.BookEntity;
