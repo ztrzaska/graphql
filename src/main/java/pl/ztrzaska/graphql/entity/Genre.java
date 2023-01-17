@@ -1,4 +1,4 @@
-package pl.ztrzaska.graphql.model;
+package pl.ztrzaska.graphql.entity;
 
 public enum Genre {
     COMEDY,

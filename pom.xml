@@ -14,7 +14,7 @@
     <name>graphql</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <lombok.version>1.18.24</lombok.version>
         <org.mapstruct.version>1.5.1.Final</org.mapstruct.version>
     </properties>

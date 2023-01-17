@@ -1,8 +1,8 @@
 package pl.ztrzaska.graphql.mapper;
 
 import org.mapstruct.Mapper;
-import pl.ztrzaska.graphql.domain.AuthorDto;
-import pl.ztrzaska.graphql.model.AuthorEntity;
+import pl.ztrzaska.graphql.model.AuthorDto;
+import pl.ztrzaska.graphql.entity.AuthorEntity;
 
 @Mapper(componentModel = "spring")
 public interface AuthorMapper {

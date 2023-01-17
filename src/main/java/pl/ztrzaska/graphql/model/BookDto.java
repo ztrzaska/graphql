@@ -1,8 +1,8 @@
-package pl.ztrzaska.graphql.domain;
+package pl.ztrzaska.graphql.model;
 
 import lombok.Builder;
 import lombok.Value;
-import pl.ztrzaska.graphql.model.Genre;
+import pl.ztrzaska.graphql.entity.Genre;
 
 import java.time.LocalDate;
 import java.time.ZonedDateTime;

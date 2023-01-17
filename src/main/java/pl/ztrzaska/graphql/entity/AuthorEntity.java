@@ -1,4 +1,4 @@
-package pl.ztrzaska.graphql.model;
+package pl.ztrzaska.graphql.entity;
 
 import lombok.Getter;
 import lombok.Setter;

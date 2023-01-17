@@ -1,8 +1,8 @@
 package pl.ztrzaska.graphql.mapper;
 
 import org.mapstruct.Mapper;
-import pl.ztrzaska.graphql.domain.BookDto;
-import pl.ztrzaska.graphql.model.BookEntity;
+import pl.ztrzaska.graphql.model.BookDto;
+import pl.ztrzaska.graphql.entity.BookEntity;
 
 import java.util.List;
 

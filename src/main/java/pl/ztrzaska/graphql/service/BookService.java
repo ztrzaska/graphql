@@ -3,11 +3,11 @@ package pl.ztrzaska.graphql.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import pl.ztrzaska.graphql.domain.BookDto;
-import pl.ztrzaska.graphql.domain.input.CreateBookInputDto;
+import pl.ztrzaska.graphql.model.BookDto;
+import pl.ztrzaska.graphql.model.input.CreateBookInputDto;
 import pl.ztrzaska.graphql.mapper.BookMapper;
-import pl.ztrzaska.graphql.model.AuthorEntity;
-import pl.ztrzaska.graphql.model.BookEntity;
+import pl.ztrzaska.graphql.entity.AuthorEntity;
+import pl.ztrzaska.graphql.entity.BookEntity;
 import pl.ztrzaska.graphql.repository.AuthorRepository;
 import pl.ztrzaska.graphql.repository.BookRepository;
 

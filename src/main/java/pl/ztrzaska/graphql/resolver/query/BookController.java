@@ -7,10 +7,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
-import pl.ztrzaska.graphql.domain.BookDto;
-import pl.ztrzaska.graphql.domain.BookPageDto;
+import pl.ztrzaska.graphql.model.BookDto;
+import pl.ztrzaska.graphql.model.BookPageDto;
 import pl.ztrzaska.graphql.mapper.BookMapper;
-import pl.ztrzaska.graphql.model.BookEntity;
+import pl.ztrzaska.graphql.entity.BookEntity;
 import pl.ztrzaska.graphql.repository.BookRepository;
 
 import java.time.LocalDateTime;
