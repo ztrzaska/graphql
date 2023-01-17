@@ -1,4 +1,4 @@
-package com.ztrzaska.graphql.domain;
+package com.ztrzaska.graphql.model;
 
 import lombok.Builder;
 import lombok.Value;

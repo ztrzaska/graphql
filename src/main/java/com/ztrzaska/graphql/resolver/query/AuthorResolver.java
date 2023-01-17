@@ -3,8 +3,8 @@ package com.ztrzaska.graphql.resolver.query;
 import graphql.kickstart.tools.GraphQLResolver;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import com.ztrzaska.graphql.domain.AuthorDto;
-import com.ztrzaska.graphql.domain.BookDto;
+import com.ztrzaska.graphql.model.AuthorDto;
+import com.ztrzaska.graphql.model.BookDto;
 
 @Component
 @Slf4j

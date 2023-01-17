@@ -1,9 +1,9 @@
 package com.ztrzaska.graphql.service;
 
-import com.ztrzaska.graphql.domain.BookDto;
-import com.ztrzaska.graphql.domain.input.CreateBookInputDto;
-import com.ztrzaska.graphql.model.AuthorEntity;
-import com.ztrzaska.graphql.model.BookEntity;
+import com.ztrzaska.graphql.model.BookDto;
+import com.ztrzaska.graphql.model.input.CreateBookInputDto;
+import com.ztrzaska.graphql.entity.AuthorEntity;
+import com.ztrzaska.graphql.entity.BookEntity;
 import com.ztrzaska.graphql.repository.AuthorRepository;
 import com.ztrzaska.graphql.repository.BookRepository;
 import lombok.RequiredArgsConstructor;

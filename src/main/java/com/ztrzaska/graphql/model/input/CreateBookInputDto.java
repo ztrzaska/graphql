@@ -1,6 +1,6 @@
-package com.ztrzaska.graphql.domain.input;
+package com.ztrzaska.graphql.model.input;
 
-import com.ztrzaska.graphql.model.Genre;
+import com.ztrzaska.graphql.entity.Genre;
 import lombok.Data;
 
 import javax.validation.constraints.Min;

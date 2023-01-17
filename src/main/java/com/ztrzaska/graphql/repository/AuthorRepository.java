@@ -1,7 +1,7 @@
 package com.ztrzaska.graphql.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.ztrzaska.graphql.model.AuthorEntity;
+import com.ztrzaska.graphql.entity.AuthorEntity;
 
 import java.util.UUID;
 

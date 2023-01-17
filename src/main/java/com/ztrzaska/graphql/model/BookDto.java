@@ -1,6 +1,6 @@
-package com.ztrzaska.graphql.domain;
+package com.ztrzaska.graphql.model;
 
-import com.ztrzaska.graphql.model.Genre;
+import com.ztrzaska.graphql.entity.Genre;
 import lombok.Builder;
 import lombok.Value;
 

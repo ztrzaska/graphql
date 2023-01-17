@@ -8,10 +8,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
-import com.ztrzaska.graphql.domain.BookDto;
-import com.ztrzaska.graphql.domain.BookPageDto;
+import com.ztrzaska.graphql.model.BookDto;
+import com.ztrzaska.graphql.model.BookPageDto;
 import com.ztrzaska.graphql.mapper.BookMapper;
-import com.ztrzaska.graphql.model.BookEntity;
+import com.ztrzaska.graphql.entity.BookEntity;
 
 import java.time.LocalDateTime;
 import java.util.List;
