@@ -1,4 +1,4 @@
-package pl.ztrzaska.graphql.resolver.mutation;
+package pl.ztrzaska.graphql.controller.mutation;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

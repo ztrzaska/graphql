@@ -1,4 +1,4 @@
-package pl.ztrzaska.graphql.resolver.query;
+package pl.ztrzaska.graphql.controller.query;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
