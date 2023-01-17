@@ -6,11 +6,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
+import pl.ztrzaska.graphql.entity.BookEntity;
+import pl.ztrzaska.graphql.mapper.BookMapper;
+import pl.ztrzaska.graphql.model.AuthorDto;
 import pl.ztrzaska.graphql.model.BookDto;
 import pl.ztrzaska.graphql.model.BookPageDto;
-import pl.ztrzaska.graphql.mapper.BookMapper;
-import pl.ztrzaska.graphql.entity.BookEntity;
 import pl.ztrzaska.graphql.repository.BookRepository;
 
 import java.time.LocalDateTime;
@@ -50,6 +52,11 @@ public class BookController {
                 .books(mappedBooks)
                 .currentPage(books.getNumber())
                 .totalPages(books.getTotalPages()).build();
+    }
+
+    @SchemaMapping(typeName = "Book", field = "author")
+    public AuthorDto author(BookDto book) {
+        return book.getAuthor();
     }
 
 }
