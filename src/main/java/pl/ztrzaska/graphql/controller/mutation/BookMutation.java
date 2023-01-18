@@ -2,6 +2,7 @@ package pl.ztrzaska.graphql.controller.mutation;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
@@ -20,7 +21,7 @@ public class BookMutation {
     private final BookService bookService;
 
     @MutationMapping
-    public BookDto createBook(@Valid CreateBookInputDto bookInput) {
+    public BookDto createBook(@Argument @Valid CreateBookInputDto bookInput) {
         return bookService.create(bookInput);
     }
 }
