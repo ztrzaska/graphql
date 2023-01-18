@@ -21,7 +21,7 @@ public class BookMutation {
     private final BookService bookService;
 
     @MutationMapping
-    public BookDto createBook(@Argument @Valid CreateBookInputDto bookInput) {
+    public BookDto createBook(@Argument(name = "input") @Valid CreateBookInputDto bookInput) {
         return bookService.create(bookInput);
     }
 }
