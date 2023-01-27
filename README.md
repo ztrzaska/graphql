@@ -30,6 +30,7 @@ curl -v -F operations="{\"query\": \"mutation { uploadFile }\", \"variables\" : 
 ## Documentation of the libraries used
 * [GraphQL documentation](https://graphql.org/)
 * [GraphQL Extended scalars documentation](https://github.com/graphql-java/graphql-java-extended-scalars)
+* [Spring for GraphQL documentation](https://spring.io/projects/spring-graphql)
 * [Spring boot](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 * [Hibernate validator](https://hibernate.org/validator/)
 
