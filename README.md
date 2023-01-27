@@ -14,6 +14,7 @@ http://localhost:9001/graphiql
 
 ## Documentation of the libraries used
 * [GraphQL documentation](https://graphql.org/)
+* [Spring for GraphQL documentation](https://spring.io/projects/spring-graphql)
 * [GraphQL Extended scalars documentation](https://github.com/graphql-java/graphql-java-extended-scalars)
 * [Spring boot](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 * [Hibernate validator](https://hibernate.org/validator/)
