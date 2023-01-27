@@ -5,6 +5,7 @@
 The following application illustrate simple functionalities with graphQL API. It has queries and mutations. Default queries are written to playground.
 
 At dedicated branches there are integration with two different graphql libraries, graphql-java-kickstart and spring for graphql.
+
 ### Playground
 ```
 http://localhost:9001/playground
