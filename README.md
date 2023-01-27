@@ -2,29 +2,15 @@
 
 ### Getting Started
 
-The following application illustrate simple functionalities with graphQL API. It has queries and mutations. Default queries are written to playground. 
+The following application illustrate simple functionalities with graphQL API. It has queries and mutations. Default queries are written to playground.
 
+At dedicated branches there are integration with two different graphql libraries, graphql-java-kickstart and spring for graphql.
 
-### Playground
+### Graphiql
 ```
-http://localhost:9001/playground
-```
-
-### Voyager
-```
-http://localhost:9001/voyager
+http://localhost:9001/graphiql
 ```
 
-### Curl
-```
-curl  --url http://localhost:9001/graphql -H 'Accept:application/json' --data-binary "{\"query\": \"query { books { id name }}\", \"variables\" : {}}"
-```
-
-### Uploading file to server
-
-```
-curl -v -F operations="{\"query\": \"mutation { uploadFile }\", \"variables\" : {}}" -F upload=@D:/a.diff http://localhost:9001/graphql
-```
 
 ## Documentation of the libraries used
 * [GraphQL documentation](https://graphql.org/)
