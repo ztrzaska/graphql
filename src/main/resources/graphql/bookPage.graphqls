@@ -1,5 +1,0 @@
-type BookPage {
-    books: [Book]
-    totalPages: Int
-    currentPage: Int
-}

@@ -1,6 +1,5 @@
 # all available queries on this graphql server
 type Query {
-  bookById(id: ID) : Book
-  books : [Book]
-  booksPaginated(pageNumber: Int!, pageSize: Int!) : BookPage
+  articleById(id: ID) : Article
+  articles : [Article]
 }

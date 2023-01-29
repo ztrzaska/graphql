@@ -1,0 +1,6 @@
+# Supported article types
+enum ArticleType {
+    SCIENCE
+    SOCIAL
+    COMMON
+}

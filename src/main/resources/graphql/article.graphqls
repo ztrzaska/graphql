@@ -1,9 +1,9 @@
-type Book {
+type Article {
   id: ID!
   name: String!
   pageCount: Int!
-  genre: Genre
-  author: Author
+  genre: ArticleType
+  author: String
   releaseDate: Date
   createdAt: DateTime
 }
