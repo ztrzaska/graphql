@@ -1,3 +1,6 @@
+scalar Date
+scalar DateTime
+
 # all available queries on this graphql server
 type Query {
   articleById(id: ID) : Article
