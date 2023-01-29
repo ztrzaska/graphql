@@ -8,6 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.List;
 
@@ -33,5 +34,5 @@ public class ArticleDocument {
 
     private LocalDate releaseDate;
 
-    private OffsetDateTime createdAt;
+    private LocalDateTime createdAt;
 }

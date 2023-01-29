@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.Clock;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Service
 @Slf4j
@@ -32,7 +32,7 @@ public class ArticleService {
                 .pageCount(articleInput.getPageCount())
                 .comments(articleInput.getComments())
                 .releaseDate(articleInput.getReleaseDate())
-                .createdAt(OffsetDateTime.now(clock))
+                .createdAt(LocalDateTime.now(clock))
                 .build();
         articleDocument = articleRepository.save(articleDocument);
 
