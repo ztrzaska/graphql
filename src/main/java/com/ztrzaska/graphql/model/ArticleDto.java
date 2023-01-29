@@ -4,8 +4,8 @@ import com.ztrzaska.graphql.document.ArticleType;
 import lombok.Builder;
 import lombok.Value;
 
-import java.time.Instant;
 import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 @Value
 @Builder
@@ -17,6 +17,6 @@ public class ArticleDto {
     ArticleType type;
     String author;
     LocalDate releaseDate;
-    Instant createdAt;
+    OffsetDateTime createdAt;
 
 }
