@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Data
-public class ArticleInputDto {
+public class CreateArticleInputDto {
 
     @NotEmpty
     String name;
