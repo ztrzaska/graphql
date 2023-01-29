@@ -1,6 +1,6 @@
 package com.ztrzaska.graphql.model.input;
 
-import com.ztrzaska.graphql.entity.Genre;
+import com.ztrzaska.graphql.document.ArticleType;
 import lombok.Data;
 
 import javax.validation.constraints.Min;
@@ -10,14 +10,14 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Data
-public class CreateBookInputDto {
+public class ArticleInputDto {
 
     @NotEmpty
     String name;
     @Min(10)
     Integer pageCount;
-    Genre genre;
+    ArticleType type;
     LocalDate releaseDate;
     @NotNull
-    UUID authorId;
+    String authorId;
 }

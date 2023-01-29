@@ -1,5 +1,5 @@
-query GET_BOOK($bookId: ID) {
-    bookById(id: $bookId) {
+query GET_ARTICLE($articleId: ID) {
+    articleById(id: $articleId) {
         id
         name
         releaseDate
@@ -11,8 +11,8 @@ query GET_BOOK($bookId: ID) {
     }
 }
 
-query GET_BOOKS {
-    books {
+query GET_ARTICLES {
+    articles {
         id
         name
         releaseDate
@@ -24,25 +24,8 @@ query GET_BOOKS {
     }
 }
 
-query GET_BOOKS_PAGINATED($pageNumber: Int!, $pageSize : Int!) {
-    booksPaginated(pageNumber: $pageNumber, pageSize: $pageSize) {
-        books {
-            id
-            name
-            releaseDate
-            author {
-                id
-                firstName
-                lastName
-            }
-        }
-        totalPages
-        currentPage
-    }
-}
-
-mutation CREATE_BOOK {
-    createBook(input: {
+mutation CREATE_ARTICLE {
+    createArticle(input: {
         name: "Rich dad, poor dad part 2"
         pageCount: 100
         genre: THRILLER
@@ -59,8 +42,4 @@ mutation CREATE_BOOK {
             id
         }
     }
-}
-
-mutation UPDATE_FILE {
-    uploadFile
 }

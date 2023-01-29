@@ -1,6 +1,6 @@
 package com.ztrzaska.graphql.model;
 
-import com.ztrzaska.graphql.entity.Genre;
+import com.ztrzaska.graphql.document.ArticleType;
 import lombok.Builder;
 import lombok.Value;
 
@@ -10,13 +10,13 @@ import java.util.UUID;
 
 @Value
 @Builder
-public class BookDto {
+public class ArticleDto {
 
-    UUID id;
+    String id;
     String name;
     Integer pageCount;
-    Genre genre;
-    AuthorDto author;
+    ArticleType type;
+    String author;
     LocalDate releaseDate;
     ZonedDateTime createdAt;
 
