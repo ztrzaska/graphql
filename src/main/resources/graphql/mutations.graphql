@@ -3,6 +3,6 @@ scalar DateTime
 
 # all available mutations on this graphql server
 type Mutation {
-    createArticle(input: CreateBookInput!) : Article!
+    createArticle(input: CreateArticleInput!) : Article!
 
 }

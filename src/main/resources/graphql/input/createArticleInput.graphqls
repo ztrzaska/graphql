@@ -1,4 +1,4 @@
-input CreateBookInput {
+input CreateArticleInput {
     name: String!
     pageCount: Int!
     genre: ArticleType
