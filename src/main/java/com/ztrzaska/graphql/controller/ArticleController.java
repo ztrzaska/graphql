@@ -50,7 +50,7 @@ public class ArticleController {
 
 
     @MutationMapping
-    public ArticleDto createBook(@Argument(name = "input") @Valid CreateArticleInputDto articleInput) {
+    public ArticleDto createArticle(@Argument(name = "input") @Valid CreateArticleInputDto articleInput) {
         return articleService.create(articleInput);
     }
 }
