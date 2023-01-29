@@ -16,7 +16,7 @@ query GET_ARTICLES {
     }
 }
 
-mutation  {
+mutation CREATE_ARTICLE {
     createArticle(input: {
         name: "Rich dad, poor dad part 2"
         pageCount: 100
