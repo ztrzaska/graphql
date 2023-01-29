@@ -19,5 +19,5 @@ public class CreateArticleInputDto {
     ArticleType type;
     LocalDate releaseDate;
     @NotNull
-    String authorId;
+    String author;
 }
