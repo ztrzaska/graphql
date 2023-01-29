@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Value;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Value
 @Builder
@@ -17,6 +16,5 @@ public class ArticleDto {
     ArticleType type;
     String author;
     LocalDate releaseDate;
-    LocalDateTime createdAt;
 
 }
