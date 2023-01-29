@@ -1,7 +1,7 @@
 input CreateArticleInput {
     name: String!
     pageCount: Int!
-    genre: ArticleType
+    type: ArticleType
     releaseDate: Date
-    authorId: String!
+    author: String!
 }

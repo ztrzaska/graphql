@@ -3,11 +3,7 @@ query GET_ARTICLE($articleId: ID) {
         id
         name
         releaseDate
-        author {
-            id
-            firstName
-            lastName
-        }
+        author
     }
 }
 
@@ -16,30 +12,24 @@ query GET_ARTICLES {
         id
         name
         releaseDate
-        author {
-            id
-            firstName
-            lastName
-        }
+        author
     }
 }
 
-mutation CREATE_ARTICLE {
+mutation  {
     createArticle(input: {
         name: "Rich dad, poor dad part 2"
         pageCount: 100
-        genre: THRILLER
-        releaseDate: "2022-01-01",
-        authorId: "6ca8d75e-f500-4864-a7f4-e73bc1a74ebb"
+        type: SCIENCE
+        releaseDate: "2022-01-01"
+        author: "R.J. Rowling"
     }) {
         id
         name
         pageCount
-        genre
+        type
         createdAt
         releaseDate
-        author {
-            id
-        }
+        author
     }
 }

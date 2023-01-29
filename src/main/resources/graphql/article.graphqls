@@ -2,7 +2,7 @@ type Article {
   id: ID!
   name: String!
   pageCount: Int!
-  genre: ArticleType
+  type: ArticleType
   author: String
   releaseDate: Date
   createdAt: DateTime
