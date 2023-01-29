@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.Clock;
+import java.time.Instant;
 import java.time.ZonedDateTime;
 
 @Service
@@ -27,10 +28,12 @@ public class ArticleService {
 
         ArticleDocument articleDocument = ArticleDocument.builder()
                 .name(articleInput.getName())
-                .pageCount(articleInput.getPageCount())
                 .type(articleInput.getType())
+                .author(articleInput.getAuthor())
+                .pageCount(articleInput.getPageCount())
+                .comments(articleInput.getComments())
                 .releaseDate(articleInput.getReleaseDate())
-                .createdAt(ZonedDateTime.now(clock))
+                .createdAt(Instant.now(clock))
                 .build();
         articleDocument = articleRepository.save(articleDocument);
 
