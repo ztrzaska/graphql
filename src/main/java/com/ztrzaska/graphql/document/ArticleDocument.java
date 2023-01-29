@@ -24,13 +24,13 @@ public class ArticleDocument {
 
     private String name;
 
-    private String author;
+    private ArticleType type;
 
-    private List<String> comments;
+    private String author;
 
     private Integer pageCount;
 
-    private ArticleType type;
+    private List<String> comments;
 
     private LocalDate releaseDate;
 
