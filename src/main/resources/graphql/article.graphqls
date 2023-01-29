@@ -4,6 +4,7 @@ type Article {
   pageCount: Int!
   type: ArticleType
   author: String
+  comments: [String]
   releaseDate: Date
   createdAt: DateTime
 }
