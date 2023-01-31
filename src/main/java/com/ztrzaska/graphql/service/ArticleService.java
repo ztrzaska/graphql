@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Clock;
 import java.time.Instant;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -37,5 +38,13 @@ public class ArticleService {
         articleDocument = articleRepository.save(articleDocument);
 
         return articleMapper.map(articleDocument);
+    }
+
+    public List<ArticleDocument> findAll(){
+        return articleRepository.findAll();
+    }
+
+    public ArticleDocument findById(String id){
+        return articleRepository.findById(id).orElse(null);
     }
 }

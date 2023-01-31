@@ -23,7 +23,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ArticleController {
 
-    private final ArticleRepository articleRepository;
     private final ArticleService articleService;
     private final ArticleMapper articleMapper;
 
@@ -31,17 +30,16 @@ public class ArticleController {
     public ArticleDto articleById(@Argument String id) {
         log.info("Retrieving new article id: {}", id);
 
-        ArticleDocument article = articleRepository.findById(id).orElse(null);
+        ArticleDocument article = articleService.findById(id);
         return articleMapper.map(article);
     }
 
     @QueryMapping
     public List<ArticleDto> articles() {
         log.info("Retrieving articles {}", LocalDateTime.now());
-        Iterable<ArticleDocument> articles = articleRepository.findAll();
+        List<ArticleDocument> articles = articleService.findAll();
         return articleMapper.map(articles);
     }
-
 
     @SchemaMapping(typeName = "Article", field = "author")
     public String author(ArticleDto article) {
