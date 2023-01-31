@@ -20,18 +20,11 @@ public class ArticleDocument {
 
     @Id
     private String id;
-
     private String name;
-
     private ArticleType type;
-
     private String author;
-
     private Integer pageCount;
-
     private List<String> comments;
-
     private LocalDate releaseDate;
-
     private Instant createdAt;
 }
