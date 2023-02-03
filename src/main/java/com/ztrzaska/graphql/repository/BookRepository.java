@@ -1,12 +1,12 @@
 package com.ztrzaska.graphql.repository;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
 import com.ztrzaska.graphql.entity.BookEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
 @Repository
-public interface BookRepository extends PagingAndSortingRepository<BookEntity, UUID> {
+public interface BookRepository extends JpaRepository<BookEntity, UUID> {
 
 }
