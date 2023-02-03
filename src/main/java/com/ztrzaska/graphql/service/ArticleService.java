@@ -22,9 +22,20 @@ public class ArticleService {
     private final ArticleMapper articleMapper;
     private final Clock clock;
 
-    public ArticleDto create(CreateArticleInputDto articleInput) {
-        log.info("Creating new article for {}", articleInput);
+    public ArticleDocument findById(String id) {
+        ArticleDocument article = articleRepository.findById(id).orElse(null);
+        log.info("Article with id: {} " + (article == null ? "not found" : "found"), id);
+        return article;
+    }
 
+    public List<ArticleDocument> findAll() {
+        List<ArticleDocument> articles = articleRepository.findAll();
+        log.info("Retrieved article: {}", articles.size());
+        return articles;
+    }
+
+    public ArticleDto create(CreateArticleInputDto articleInput) {
+        log.info("Creating article for {}", articleInput);
 
         ArticleDocument articleDocument = ArticleDocument.builder()
                 .name(articleInput.getName())
@@ -40,11 +51,4 @@ public class ArticleService {
         return articleMapper.map(articleDocument);
     }
 
-    public List<ArticleDocument> findAll() {
-        return articleRepository.findAll();
-    }
-
-    public ArticleDocument findById(String id){
-        return articleRepository.findById(id).orElse(null);
-    }
 }
