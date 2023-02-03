@@ -1,11 +1,11 @@
 package pl.ztrzaska.graphql.controller.query;
 
-import graphql.schema.DataFetchingEnvironment;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.ContextValue;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
@@ -29,7 +29,7 @@ public class BookController {
     private final BookMapper bookMapper;
 
     @QueryMapping
-    public BookDto bookById(@Argument UUID id, DataFetchingEnvironment environment) {
+    public BookDto bookById(@Argument UUID id, @ContextValue String version) {
         log.info("Retrieving new book id: {}", id);
 
         BookEntity book = bookRepository.findById(id).orElse(null);
