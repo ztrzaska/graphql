@@ -20,6 +20,7 @@ public class BookMutation {
 
     @MutationMapping
     public BookDto createBook(@Argument(name = "input") @Valid CreateBookInputDto bookInput) {
+        log.info("Creating new book");
         return bookService.create(bookInput);
     }
 }

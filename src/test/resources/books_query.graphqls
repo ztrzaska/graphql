@@ -1,0 +1,12 @@
+query {
+    books {
+        id
+        name
+        releaseDate
+        author {
+            id
+            firstName
+            lastName
+        }
+    }
+}
