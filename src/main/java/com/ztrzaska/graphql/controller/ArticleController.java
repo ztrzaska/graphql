@@ -28,7 +28,7 @@ public class ArticleController {
 
     @QueryMapping
     public ArticleDto articleById(@Argument String id) {
-        log.info("Retrieving new article id: {}", id);
+        log.info("Retrieving article id: {}", id);
 
         ArticleDocument article = articleService.findById(id);
         return articleMapper.map(article);
@@ -36,7 +36,7 @@ public class ArticleController {
 
     @QueryMapping
     public List<ArticleDto> articles() {
-        log.info("Retrieving articles {}", LocalDateTime.now());
+        log.info("Retrieving all articles");
         List<ArticleDocument> articles = articleService.findAll();
         return articleMapper.map(articles);
     }

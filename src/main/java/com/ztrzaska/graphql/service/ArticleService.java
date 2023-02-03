@@ -40,7 +40,7 @@ public class ArticleService {
         return articleMapper.map(articleDocument);
     }
 
-    public List<ArticleDocument> findAll(){
+    public List<ArticleDocument> findAll() {
         return articleRepository.findAll();
     }
 
