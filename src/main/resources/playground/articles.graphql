@@ -22,7 +22,7 @@ mutation CREATE_ARTICLE {
         pageCount: 100
         type: SCIENCE
         releaseDate: "2022-01-01"
-        author: "R.J. Rowling"
+        author: "R.K. Rowling"
     }) {
         id
         name

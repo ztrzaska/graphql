@@ -1,0 +1,20 @@
+[
+  {
+    "_class": "com.ztrzaska.graphql.document.ArticleDocument",
+    "id": "63de87c66a67887eab22a0f6",
+    "name": "Rich dad, poor dad, part 1",
+    "pageCount": 230,
+    "type": "SCIENCE",
+    "releaseDate": "2021-01-01",
+    "author": "Robert T. Kiyosaki"
+  },
+  {
+    "_class": "com.ztrzaska.graphql.document.ArticleDocument",
+    "id": "63de87c66a67887eab22a0f7",
+    "name": "Rich dad, poor dad, part 2",
+    "pageCount": 250,
+    "type": "SCIENCE",
+    "releaseDate": "2021-06-01",
+    "author": "Robert T. Kiyosaki"
+  }
+]
