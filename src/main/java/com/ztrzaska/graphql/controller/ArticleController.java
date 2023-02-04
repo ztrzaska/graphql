@@ -1,10 +1,7 @@
 package com.ztrzaska.graphql.controller;
 
-import com.ztrzaska.graphql.document.ArticleDocument;
-import com.ztrzaska.graphql.mapper.ArticleMapper;
 import com.ztrzaska.graphql.model.ArticleDto;
 import com.ztrzaska.graphql.model.input.CreateArticleInputDto;
-import com.ztrzaska.graphql.repository.ArticleRepository;
 import com.ztrzaska.graphql.service.ArticleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +12,6 @@ import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
@@ -24,21 +20,17 @@ import java.util.List;
 public class ArticleController {
 
     private final ArticleService articleService;
-    private final ArticleMapper articleMapper;
 
     @QueryMapping
     public ArticleDto articleById(@Argument String id) {
         log.info("Retrieving article id: {}", id);
-
-        ArticleDocument article = articleService.findById(id);
-        return articleMapper.map(article);
+        return articleService.findById(id);
     }
 
     @QueryMapping
     public List<ArticleDto> articles() {
         log.info("Retrieving all articles");
-        List<ArticleDocument> articles = articleService.findAll();
-        return articleMapper.map(articles);
+        return articleService.findAll();
     }
 
     @SchemaMapping(typeName = "Article", field = "author")

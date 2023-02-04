@@ -22,16 +22,16 @@ public class ArticleService {
     private final ArticleMapper articleMapper;
     private final Clock clock;
 
-    public ArticleDocument findById(String id) {
+    public ArticleDto findById(String id) {
         ArticleDocument article = articleRepository.findById(id).orElse(null);
         log.info("Article with id: {} " + (article == null ? "not found" : "found"), id);
-        return article;
+        return articleMapper.map(article);
     }
 
-    public List<ArticleDocument> findAll() {
+    public List<ArticleDto> findAll() {
         List<ArticleDocument> articles = articleRepository.findAll();
         log.info("Retrieved article: {}", articles.size());
-        return articles;
+        return articleMapper.map(articles);
     }
 
     public ArticleDto create(CreateArticleInputDto articleInput) {
