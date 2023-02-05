@@ -23,7 +23,7 @@ curl  --url http://localhost:9001/graphql -H 'Accept:application/json' --data-bi
 ### Uploading file to server
 
 ```
-curl -v -F operations="{\"query\": \"mutation { uploadFile }\", \"variables\" : {}}" -F upload=@D:/a.diff http://localhost:9001/graphql
+curl -v -F operations="{\"query\": \"mutation { uploadFile }\", \"variables\" : {}}" -F upload=@D:/a.txt http://localhost:9001/graphql
 ```
 
 ## Documentation of the libraries used
